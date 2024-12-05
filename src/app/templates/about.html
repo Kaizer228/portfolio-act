@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'general.css' %}">
+
+  <title>About</title>
+
+
+</head>
+
+<body class="flex flex-col bg-gradient-to-b from-violet-700 to-black items-center justify-center relative">
+  <nav
+    class="flex items-center z-[2]  justify-center text-white text-md py-2 px-5 absolute top-10 max-md:top-5 left-0 right-0 rounded-full w-fit gap-10 max-lg:gap-2 max-md:text-sm  max-md:gap-5  m-auto bg-white bg-opacity-30 border border-white">
+    <a href="{% url 'home' %}" class="border-b-2 border-white border-opacity-0 hover:border-b-2 hover:border-opacity-100 hover:transition">Home</a>
+    <a href="{% url 'about' %}" class="border-b-2 border-white border-opacity-0 hover:border-b-2 hover:border-opacity-100 hover:transition">About</a>
+    <a href="{% url 'home' %}" class="text-2xl font-medium">Marc<span class="text-black">Dev</span></h1>
+    <a href="{% url 'projects' %}" href="" class="border-b-2 border-white border-opacity-0 hover:border-b-2 hover:border-opacity-100 hover:transition">Projects</a>  
+    <a href="{% url 'stack' %}" class="border-b-2 border-white border-opacity-0 hover:border-b-2 hover:border-opacity-100 hover:transition">Stack</a>
+  </nav>
+
+  <div class="h-screen w-screen flex items-center justify-center max-lg:block max-lg:h-fit text-white">
+    {% load static %}
+    <img src="{% static 'marc.png' %}" class="w-1/2 fade-up h-full max-lg:w-full  object-contain">
+
+    <div class="w-1/2 h-screen flex items-center fade-up max-lg:w-full max-lg:px-5">
+      <div>
+        <h1 class="text-start text-5xl font-semibold">Wassup i'm Marc Erman Martinez</h1>
+        <p class="w-[80%] mt-5">
+          Hello, I'm Marc, a passionate Full-Stack Developer from the Philippines. I specialize in creating scalable
+          systems that deliver exceptional performance and outstanding user experiences. My expertise lies in the React
+          ecosystem, including advanced React.js and React Native with the Expo platform. I also build robust web APIs
+          using Node.js and Express.
+
+          Always curious and eager to learn, I embrace new technologies and challenges. Let's build something amazing
+          together!
+        </p>
+
+        <h1 class="text-start text-3xl font-semibold mt-10">Education</h1>
+
+        <p>STI Sta.Maria - Sophomore</p>
+
+
+        <h1 class="text-start text-3xl font-semibold mt-10">Resume</h1>
+        {% load static %}
+        <a href="{% static 'Resume.pdf' %}"" class="bg-white mt-2 block w-fit bg-opacity-30 border px-4 py-1 rounded-full mt-2 hover:scale-125 transition">Download CV</a>
+      </div>
+    </div>
+  </div>
+  <div class="z-[2] bg-white bg-opacity-30 p-4 flex items-center gap-2 fade-up rounded-full   border absolute bottom-10 end-10 hover:bg-purple-800 cursor-pointer transition group">
+    <span   class="iconify text-3xl text-white" data-icon="wpf:message"></span>
+    <a  href="mailto:martinezmarc228@gmail.com"  class="hidden group-hover:flex text-white text-xl group-hover:transition fade-up">Message Me</a>
+  </div>
+</body>
+</html>

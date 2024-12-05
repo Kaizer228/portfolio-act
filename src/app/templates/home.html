@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'general.css' %}">
+
+  <title>Marc | Full-Stack Developer</title>
+
+
+</head>
+
+<body class="flex flex-col bg-gradient-to-b from-violet-700 to-black items-center justify-center relative">
+  
+  <div class="z-[2] bg-white bg-opacity-30 p-4 flex items-center gap-2 fade-up rounded-full   border absolute bottom-10 end-10 hover:bg-purple-800 cursor-pointer transition group">
+    <span   class="iconify text-3xl text-white" data-icon="wpf:message"></span>
+    <a  href="mailto:martinezmarc228@gmail.com"  class="hidden group-hover:flex text-white text-xl group-hover:transition fade-up">Message Me</a>
+  </div>
+  
+
+  <nav
+    class="flex items-center z-[2]  justify-center text-white text-md py-2 px-5 absolute top-10 max-md:top-5 left-0 right-0 rounded-full w-fit gap-10 max-lg:gap-2 max-md:text-sm  max-md:gap-5  m-auto bg-white bg-opacity-30 border border-white">
+    <a href="{% url 'home' %}" class="border-b-2 border-white border-opacity-0 hover:border-b-2 hover:border-opacity-100 hover:transition">Home</a>
+    <a href="{% url 'about' %}" class="border-b-2 border-white border-opacity-0 hover:border-b-2 hover:border-opacity-100 hover:transition">About</a>
+    <a href="{% url 'home' %}" class="text-2xl font-medium">Marc<span class="text-black">Dev</span></h1>
+    <a href="{% url 'projects' %}" href="" class="border-b-2 border-white border-opacity-0 hover:border-b-2 hover:border-opacity-100 hover:transition">Projects</a>  
+    <a href="{% url 'stack' %}" class="border-b-2 border-white border-opacity-0 hover:border-b-2 hover:border-opacity-100 hover:transition">Stack</a>
+  </nav>
+
+  <div   class="h-screen w-screen fade-up flex flex-col items-center justify-center text-white">
+    <h1 class="text-6xl text-center animate-pulse max-lg:text-3xl font-bold">
+      Hello I'm Marc Erman Martinez
+    </h1>
+
+    <p class="text-center mt-3 w-[50%] max-2xl:w-[60%] max-md:w-[90%] font-medium max-2xl:text-sm">
+      Welcome to my portfolio! I’m Marc, a passionate Full Stack Developer with a strong foundation in JavaScript,
+      TypeScript, and modern web technologies. My focus is on building scalable, dynamic applications with a seamless
+      user experience.
+    </p>
+
+    <div class="text-center flex items-center gap-2 justify-center mt-3">
+      <h1 class="text-sm">Socials</h1>
+      <div class="text-2xl gap-4 flex cursor-pointer items-center">
+
+        <a href="https://www.facebook.com/profile.php?id=100022807817589">
+          <span class="iconify text-3xl  hover:scale-125 transition" data-icon="logos:facebook"> </span>
+        </a>
+      
+         <a href="https://www.instagram.com/marcthephilosopher/">
+          <span class="iconify text-3xl hover:scale-125 transition" data-icon="skill-icons:instagram"></span>
+         </a>
+        
+         <a href="https://www.tiktok.com/@marcdev2?is_from_webapp=1&sender_device=pc">
+          <span class="iconify text-3xl hover:scale-125 transition" data-icon="logos:tiktok-icon"></span>
+         </a>
+        
+       
+      <a href="https://www.youtube.com/@marcermanmartinez2849">
+        <span class="iconify text-2xl hover:scale-125 transition" data-icon="logos:youtube-icon"></span>
+      </a>
+
+
+      </div>
+    </div>
+    {% load static %}
+    <img src="{% static 'laptop.png' %}" class="w-1/2 h-1/2 max-lg:w-full animate-pulse max-2xl:h-[40%] object-contain">
+  </div>
+</body>
+
+</html>
